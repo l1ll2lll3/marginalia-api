@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { getSearchIndex, getWords } from "./_data";
+import { getSearchIndex, getWords } from "../lib/data.js";
 
 export const config = { runtime: "nodejs" };
 

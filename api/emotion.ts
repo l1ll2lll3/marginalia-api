@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { getEmotionData } from "./_data";
+import { getEmotionData } from "../lib/data.js";
 
 export const config = { runtime: "nodejs" };
 
