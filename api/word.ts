@@ -1,5 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { getSearchIndex, getWords } from "./_data.js";
+import { getSearchIndex, getWords } from "./_data";
+
+export const config = { runtime: "nodejs" };
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const q = (req.query.q as string || "").trim().toLowerCase();

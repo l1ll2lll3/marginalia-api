@@ -1,5 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { getEmotionData } from "./_data.js";
+import { getEmotionData } from "./_data";
+
+export const config = { runtime: "nodejs" };
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const book = (req.query.book as string || "moon").toLowerCase();

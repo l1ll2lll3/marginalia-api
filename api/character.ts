@@ -1,5 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
+export const config = { runtime: "nodejs" };
+
 const PAIRS: Record<string, { sim: number; c1: string; b1: string; c2: string; b2: string; insight: string }> = {
   "catherine_earnshaw/박영채": { sim: 0.902, c1: "Catherine Earnshaw", b1: "Wuthering Heights", c2: "박영채", b2: "무정", insight: "Both are tragic women caught between passion and duty. Catherine between Heathcliff and Edgar; Yeongchae between love for Hyeongshik and her fate as a gisaeng." },
   "charles_strickland/basil_hallward": { sim: 0.899, c1: "Charles Strickland", b1: "Moon and Sixpence", c2: "Basil Hallward", b2: "Dorian Gray", insight: "Both are consumed by artistic obsession. Strickland destroys others to create; Basil is destroyed by what he creates." },
